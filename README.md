@@ -26,11 +26,12 @@ Pour la connexion/inscription, l’idée n’est pas de tout refaire mais d’ut
 Ce projet sur Github est synchronisé et excécutable sur [codesandbox.io](https://codesandbox.io).
 
 
-## Services
+## API
 
-[Axios](https://axios-http.com/fr/docs/intro) : Client HTTP basé sur les promesses compatible avec node.js et les navigateurs.
-[Auth0](https://auth0.com) : Plate-forme d'authentification et d'autorisation adaptable facile à mettre en œuvre.
-[randomuser](https://randomuser.me/) : Générateur aléatoire de profils utilisateurs.
+- [Axios](https://axios-http.com/fr/docs/intro) : Client HTTP basé sur les promesses compatible avec node.js et les navigateurs.
+- [Auth0](https://auth0.com) : Plate-forme d'authentification et d'autorisation adaptable facile à mettre en œuvre.
+- [randomuser](https://randomuser.me/) : Générateur aléatoire de profils utilisateurs.
+
 
 ## Auteur
 
