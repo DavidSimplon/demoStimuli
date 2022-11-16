@@ -9,7 +9,7 @@ const Hero = () => (
     <p className="lead">
       Connectez-vous pour consulter cette application.{" "}
     </p>{" "}
-    <p> Découvrez <a href="https://www.figma.com/file/XV3IMdUHX0evggp32diLta/DemoStimuli?node-id=0%3A1&t=DLtUn17QCwQmpDrt-1">la maquette sur Figma</a> et les avantages de la création de compte. </p>{" "}
+    <p> Découvrez <a href="https://www.figma.com/file/XV3IMdUHX0evggp32diLta/DemoStimuli?node-id=0%3A1&t=DLtUn17QCwQmpDrt-1" target="_blank" rel="noreferrer">la maquette sur Figma</a> et les avantages de la création de compte. </p>{" "}
   </div>
 );
 
