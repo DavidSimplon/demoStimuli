@@ -12,7 +12,6 @@ const Footer = () => {
   const Loading = useAuth0.isLoading;
 
   const currentLocation = useLocation();
-  console.log("currentLocation:", currentLocation);
 
   const [premium, setPremium] = store.useState("Premium");
 
