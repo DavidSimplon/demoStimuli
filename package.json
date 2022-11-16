@@ -13,7 +13,8 @@
         "api-server": "node api-server.js",
         "api-server:dev": "nodemon api-server.js",
         "dev": "npm-run-all --parallel spa api-server:dev",
-        "prod": "npm-run-all --parallel server api-server"
+        "prod": "npm-run-all --parallel server api-server",
+        "deploy": "gh-pages -d build"
     },
     "dependencies": {
         "@auth0/auth0-react": "^1.12.0",
@@ -53,6 +54,7 @@
     "devDependencies": {
         "@testing-library/jest-dom": "^5.16",
         "@testing-library/react": "^12.1",
+        "gh-pages": "^4.0.0",
         "jest-environment-jsdom": "^27.0",
         "jest-fetch-mock": "^3.0",
         "nodemon": "^2.0",
@@ -84,5 +86,5 @@
     "bugs": {
         "url": "https://github.com/DavidSimplon/demoStimuli/issues"
     },
-    "homepage": "./"
+    "homepage": "https://DavidSimplon.github.io//demoStimuli"
 }
