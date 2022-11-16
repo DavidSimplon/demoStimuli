@@ -27,7 +27,7 @@ const NavBar = () => {
   const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
   const toggle = () => setIsOpen(!isOpen);
 
-  const [premium, setPremium] = store.useState("Premium");
+  const [premium] = store.useState("Premium");
 
   const logoutWithRedirect = () =>
     logout({

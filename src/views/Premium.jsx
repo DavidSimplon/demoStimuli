@@ -1,14 +1,13 @@
 import React, { Fragment, useState, useEffect, useCallback } from "react";
-import { Row, Col } from "reactstrap";
+import { Row } from "reactstrap";
 import Loading from "../components/Loading";
 import axios from 'axios';
 import ProfileCard from "../components/ProfileCard";
 
-import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
+import { withAuthenticationRequired } from "@auth0/auth0-react";
 
 const Premium = () => {
-  const { user } = useAuth0();
-  
+
   let [responseData, setResponseData] = useState('');
 
   const fetchData = useCallback(() => {
