@@ -24,7 +24,7 @@ Pour la connexion/inscription, l’idée n’est pas de tout refaire mais d’ut
 ## Hébergement
 
 Ce projet sur Github est synchronisé et excécutable sur [codesandbox.io](https://codesandbox.io).
-
+Vous pouvez-consulter la maquette du projet sur [Figma](https://www.figma.com/file/XV3IMdUHX0evggp32diLta/DemoStimuli?node-id=0%3A1&t=DLtUn17QCwQmpDrt-1).
 
 ## API
 
