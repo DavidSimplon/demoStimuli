@@ -54,22 +54,21 @@ const ProfileCard:FunctionComponent<Props> = ({user}) => {
     <Grow in={true}           
       style={{ transformOrigin: '0 0 0' }}
       {...{timeout: 1000}}>
-      <Card sx={{ maxWidth: 345, borderRadius:5, backgroundColor:"#eee" }}>
-        <Typography variant="h5" component="div" style={{color:'#fff', backgroundColor:"#333"}}>
-          <div className="ml-3">
+      <Card className="card">
+        <Grid className="card-header">
+          <Typography variant="h5" component="div" className="card-title">
             {user.name.first}
-          </div>
-        </Typography>
-        <Grid sx={{ backgroundColor:"#eee"}}>
+          </Typography>
+        </Grid>
+        <Grid className="card-body">
           <CardMedia
             component="img"
             height="180"
-            style={{marginLeft: 0, marginRight: 0}}
             image={user.picture.large}
             alt="profile photo"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="h6" component="div">
               {user.name.title} {user.name.last}
             </Typography>
             <Typography variant="body2" color="text.secondary">
@@ -77,12 +76,14 @@ const ProfileCard:FunctionComponent<Props> = ({user}) => {
             </Typography>
           </CardContent>
 
+        </Grid>
+        <Grid className="card-footer">
           <CardActions>
             <Button size="small" color="primary" href={'mailto:'+user.email}>Email</Button>
             <Button size="small" color="primary" href={'tel:'+user.phone}>Phone</Button>
           </CardActions>
-          
         </Grid>
+          
       </Card>
     </Grow>
 
