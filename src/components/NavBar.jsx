@@ -27,7 +27,7 @@ const NavBar = () => {
   const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
   const toggle = () => setIsOpen(!isOpen);
 
-  const [premium] = store.useState("Premium");
+  const [premiumchecked] = store.useState("Premium");
 
   const logoutWithRedirect = () =>
     logout({
@@ -64,7 +64,7 @@ const NavBar = () => {
                   </NavLink>{" "}
                 </NavItem>
               )}{" "}
-              {isAuthenticated && premium && (
+              {isAuthenticated && premiumchecked && (
                 <NavItem>
                   <NavLink
                     tag={RouterNavLink}

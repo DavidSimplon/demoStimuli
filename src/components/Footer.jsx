@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import SwitchBase from "@mui/material/Switch";
+import Switch from "@mui/material/Switch";
 import store from "../utils/store";
 import { useAuth0 } from "@auth0/auth0-react";
 import  { useLocation  } from 'react-router-dom'
@@ -13,47 +13,44 @@ const Footer = () => {
 
   const currentLocation = useLocation();
 
-  const [premium, setPremium] = store.useState("Premium");
+  const [premiumDisabled, setPremiumDisabled] = useState()
+  const [premiumchecked, setPremiumChecked] = store.useState("Premium");
 
   const handleChange = (e) => {
-    if (!premium){
+    if (!premiumchecked){
       alert("Vous pouvez désormais accéder à l'espace membre.")
     }
-    setPremium(!premium);    
+    setPremiumChecked(!premiumchecked);    
   };
 
-  const initSwitch = () => {
+  useEffect(() => {
+    // On peut déterminer un état par défaut dans le "return", mais on ne pourrait plus y toucher à chaque rendu,
+    // donc on change les états du switch en JS dans useEffect, après le premier rendu et à chauqe modification des useState.
     if (Authenticated && !Loading){
-      if (premium) {
+      if (premiumchecked) {
+        setPremiumChecked(true)
         if (currentLocation.pathname==="/welcome"){
-          return (
-            <FormControlLabel control={<SwitchBase checked onChange={(e) => handleChange(e)} />} label="Premium " />
-          );
-        }else{
-          return (
-            <FormControlLabel control={<SwitchBase checked disabled onChange={(e) => handleChange(e)} />} label="Premium " />
-            );
+          setPremiumDisabled(false)
+        } else {
+          setPremiumDisabled(true)
         }
       } else {
+        setPremiumChecked(false)
         if (currentLocation.pathname==="/welcome"){
-          return (
-          <FormControlLabel control={<SwitchBase onChange={(e) => handleChange(e)} />} label="Premium " />
-        );
-        }else{
-          return (
-            <FormControlLabel control={<SwitchBase disabled onChange={(e) => handleChange(e)} />} label="Premium " />
-            );
+          setPremiumDisabled(false)
+        } else {
+          setPremiumDisabled(true)
         }
-    }
+      }
     }else{
-      return ""
+      setPremiumDisabled(true)
     }
-  };
+  }, [Authenticated, Loading, premiumchecked, currentLocation, setPremiumChecked]);
 
   return (
     <footer className="bg-light p-5 text-center">
       <div className='col text-right'>
-        {initSwitch()}
+        <FormControlLabel disabled={premiumDisabled} checked={premiumchecked} control={<Switch onChange={(e) => handleChange(e)}/>} label="Premium " />
       </div>
       <p>Copyright © 2022 Stimuli by David BRUNET</p>
     </footer>
