@@ -46,8 +46,8 @@ const Premium = () => {
       <div className="row m-2">
         {responseData && 
           responseData.map((user) =>
-          <div className="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-2 my-2 d-flex justify-content-center">
-            <ProfileCard key={user.login.uuid} user={user} handleClick={(e) => handleClick(e, user.login.uuid)} />
+          <div key={user.login.uuid} className="col-12 col-sm-6 col-md-4 col-xl-3 col-xxl-2 my-2 d-flex justify-content-center">
+            <ProfileCard user={user} handleClick={(e) => handleClick(e, user.login.uuid)} />
           </div>
         )}
       </div>
