@@ -50,7 +50,7 @@ const Footer = () => {
   return (
     <footer className="bg-light p-5 text-center">
       <div className='col text-right'>
-        <FormControlLabel disabled={premiumDisabled} checked={premiumchecked} control={<Switch onChange={(e) => handleChange(e)}/>} label="Premium " />
+        <FormControlLabel disabled={premiumDisabled} checked={premiumchecked} control={<Switch onChange={() => handleChange()}/>} label="Premium " />
       </div>
       <p>Copyright © 2022 Stimuli by David BRUNET</p>
     </footer>

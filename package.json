@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "start": "npm-run-all --parallel spa api-server",
-        "build": "react-scripts build",
+        "build": "set PUBLIC_URL=https://davidsimplon.github.io&&react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "spa": "react-scripts start",
@@ -14,7 +14,7 @@
         "api-server:dev": "nodemon api-server.js",
         "dev": "npm-run-all --parallel spa api-server:dev",
         "prod": "npm-run-all --parallel server api-server",
-        "deploy": "gh-pages -d build",
+        "deploy": "set PUBLIC_URL=https://davidsimplon.github.io&&gh-pages -d build",
         "lint": "eslint . --ext **/*.{ts,tsx,js,jsx,json}",
         "lint-and-fix": "eslint . --ext **/*.{ts,tsx,js,jsx,json} --fix"
     },
@@ -98,6 +98,5 @@
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/DavidSimplon/demoStimuli/issues"
-    },
-    "homepage": "./"
+    }
 }

@@ -1,20 +1,21 @@
-import express from "express";
-import cors from "cors";
-import morgan from "morgan";
-import helmet from "helmet";
-import jwt from "express-jwt";
-import { expressJwtSecret } from "jwks-rsa";
-import { appOrigin as _appOrigin, domain, audience as _audience } from "./src/auth_config.json";
+/* eslist-env node */
+const express = require("express");
+const cors = require("cors");
+const morgan = require("morgan");
+const helmet = require("helmet");
+const jwt = require("express-jwt");
+const jwksRsa = require("jwks-rsa");
+const authConfig = require("./src/auth_config.json");
 
 const app = express();
 
 const port = process.env.API_PORT || 3001;
 const appPort = process.env.SERVER_PORT || 3000;
-const appOrigin = _appOrigin || `http://localhost:${appPort}`;
+const appOrigin = authConfig.appOrigin || `http://localhost:${appPort}`;
 
-if (!domain ||
-    !_audience ||
-    _audience === "YOUR_API_IDENTIFIER"
+if (!authConfig.domain ||
+    !authConfig.audience ||
+    authConfig.audience === "YOUR_API_IDENTIFIER"
 ) {
     console.log(
         "Exiting: Please make sure that auth_config.json is in place and populated with valid domain and audience values"
@@ -28,15 +29,15 @@ app.use(helmet());
 app.use(cors({ origin: appOrigin }));
 
 const checkJwt = jwt({
-    secret: expressJwtSecret({
+    secret: jwksRsa.expressJwtSecret({
         cache: true,
         rateLimit: true,
         jwksRequestsPerMinute: 5,
-        jwksUri: `https://${domain}/.well-known/jwks.json`,
+        jwksUri: `https://${authConfig.domain}/.well-known/jwks.json`,
     }),
 
-    audience: _audience,
-    issuer: `https://${domain}/`,
+    audience: authConfig.audience,
+    issuer: `https://${authConfig.domain}/`,
     algorithms: ["RS256"],
 });
 
