@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "https://davidsimplon.github.io/static/css/main.3a4a5ae2.css",
-    "main.js": "https://davidsimplon.github.io/static/js/main.efd5ada5.js",
-    "static/media/logo.png": "https://davidsimplon.github.io/static/media/logo.f84ec337312f14a54a7b.png",
-    "static/media/loading.svg": "https://davidsimplon.github.io/static/media/loading.330b7d99bfbae8039a5456998d97914f.svg",
-    "index.html": "https://davidsimplon.github.io/index.html",
-    "static/media/github.svg": "https://davidsimplon.github.io/static/media/github.1dbcf7b2491be69d987cad6ab8eacebc.svg",
-    "main.3a4a5ae2.css.map": "https://davidsimplon.github.io/static/css/main.3a4a5ae2.css.map",
-    "main.efd5ada5.js.map": "https://davidsimplon.github.io/static/js/main.efd5ada5.js.map"
+    "main.css": "https://davidsimplon.github.io/demoStimuli/static/css/main.3a4a5ae2.css",
+    "main.js": "https://davidsimplon.github.io/demoStimuli/static/js/main.5ee8ff3d.js",
+    "static/media/logo.png": "https://davidsimplon.github.io/demoStimuli/static/media/logo.f84ec337312f14a54a7b.png",
+    "static/media/loading.svg": "https://davidsimplon.github.io/demoStimuli/static/media/loading.330b7d99bfbae8039a5456998d97914f.svg",
+    "index.html": "https://davidsimplon.github.io/demoStimuli/index.html",
+    "static/media/github.svg": "https://davidsimplon.github.io/demoStimuli/static/media/github.1dbcf7b2491be69d987cad6ab8eacebc.svg",
+    "main.3a4a5ae2.css.map": "https://davidsimplon.github.io/demoStimuli/static/css/main.3a4a5ae2.css.map",
+    "main.5ee8ff3d.js.map": "https://davidsimplon.github.io/demoStimuli/static/js/main.5ee8ff3d.js.map"
   },
   "entrypoints": [
     "static/css/main.3a4a5ae2.css",
-    "static/js/main.efd5ada5.js"
+    "static/js/main.5ee8ff3d.js"
   ]
 }
