@@ -19,13 +19,13 @@ class Highlight extends Component {
 
     if (language && !registeredLanguages[language]) {
       try {
-        const newLanguage = require(`highlight.js/lib/languages/${language}`);
+        const newLanguage = import(`highlight.js/lib/languages/${language}`);
         hljs.registerLanguage(language, newLanguage);
         registeredLanguages[language] = true;
 
         this.setState({ loaded: true }, this.highlight);
       } catch (e) {
-        console.error(e);
+        window.console.error(e);
         throw Error(`Cannot register the language ${language}`);
       }
     } else {

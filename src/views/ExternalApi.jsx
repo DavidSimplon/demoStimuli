@@ -92,7 +92,7 @@ export const ExternalApiComponent = () => {
             You need to{" "}
             <a
               href="#/"
-              class="alert-link"
+              className="alert-link"
               onClick={(e) => handle(e, handleConsent)}
             >
               consent to get access to users api
@@ -105,7 +105,7 @@ export const ExternalApiComponent = () => {
             You need to{" "}
             <a
               href="#/"
-              class="alert-link"
+              className="alert-link"
               onClick={(e) => handle(e, handleLoginAgain)}
             >
               log in again
@@ -121,17 +121,17 @@ export const ExternalApiComponent = () => {
         <p>
           This will call a local API on port 3001 that would have been started
           if you run <code>npm run dev</code>. An access token is sent as part
-          of the request's `Authorization` header and the API will validate it
-          using the API's audience value.
+          of the request&apos;s `Authorization` header and the API will validate it
+          using the API&apos;s audience value.
         </p>
 
         {!audience && (
           <Alert color="warning">
             <p>
-              You can't call the API at the moment because your application does
+              You can&apos;t call the API at the moment because your application does
               not have any configuration for <code>audience</code>, or it is
               using the default value of <code>YOUR_API_IDENTIFIER</code>. You
-              might get this default value if you used the "Download Sample"
+              might get this default value if you used the &quot;Download Sample&quot;
               feature of{" "}
               <a href="https://auth0.com/docs/quickstart/spa/react">
                 the quickstart guide
@@ -166,7 +166,7 @@ export const ExternalApiComponent = () => {
             </ul>
             <p>
               Once you have configured the value for <code>audience</code>,
-              please restart the app and try to use the "Ping API" button below.
+              please restart the app and try to use the &quot;Ping API&quot; button below.
             </p>
           </Alert>
         )}

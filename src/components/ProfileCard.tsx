@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react'
+import React, { FunctionComponent } from 'react'
 import Grow from '@mui/material/Grow';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';

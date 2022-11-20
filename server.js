@@ -1,7 +1,7 @@
-const express = require("express");
-const morgan = require("morgan");
-const helmet = require("helmet");
-const { join } = require("path");
+import express from "express";
+import morgan from "morgan";
+import helmet from "helmet";
+import { join } from "path";
 
 const app = express();
 
@@ -10,9 +10,9 @@ const port = process.env.SERVER_PORT || 3000;
 app.use(morgan("dev"));
 
 app.use(
-  helmet({
-    contentSecurityPolicy: false,
-  })
+    helmet({
+        contentSecurityPolicy: false,
+    })
 );
 
 app.use(express.static(join(__dirname, "build")));

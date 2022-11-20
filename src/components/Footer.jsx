@@ -16,7 +16,7 @@ const Footer = () => {
   const [premiumDisabled, setPremiumDisabled] = useState()
   const [premiumchecked, setPremiumChecked] = store.useState("Premium");
 
-  const handleChange = (e) => {
+  const handleChange = () => {
     if (!premiumchecked){
       alert("Vous pouvez désormais accéder à l'espace membre.")
     }

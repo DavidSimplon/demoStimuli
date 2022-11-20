@@ -19,7 +19,7 @@
     }
 }
 
-.spinner {
+.spinner-fullscreen {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -30,6 +30,15 @@
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.spinner-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 120px;
+    width: 100%;
+    background-color: white;
 }
 
 .result-block-container .result-block {

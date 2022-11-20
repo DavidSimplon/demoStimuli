@@ -5,7 +5,7 @@ const NotFound = () => (
   <Fragment>
     <div className="text-center">
       <h1 >Page introuvable !</h1>
-      <Link to="/">Retourner à l'accueil</Link>
+      <Link to="/">{"Retourner à l'accueil"}</Link>
     </div>
   </Fragment>
 );
