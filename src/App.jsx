@@ -9,7 +9,6 @@ import Home from "./views/Home";
 import Welcome from "./views/Welcome";
 import Premium from "./views/Premium";
 import Profile from "./views/Profile";
-import ExternalApi from "./views/ExternalApi";
 import NotFound from "./views/NotFound";
 import { useAuth0 } from "@auth0/auth0-react";
 import history from "./utils/history";
@@ -42,11 +41,10 @@ const App = () => {
         <NavBar />
         <Container className="flex-grow-1 mt-5">
           <Switch>
-            <Route path="/" exact component={Home} />{" "}
-            <Route path="/welcome" component={Welcome} />{" "}
-            <Route path="/premium" component={(premium && Premium) || (!premium && Home)} />{" "}
-            <Route path="/profile" component={Profile} />{" "}
-            <Route path="/external-api" component={ExternalApi} />{" "}
+            <Route path={`${process.env.PUBLIC_URL}/`} exact component={Home} />{" "}
+            <Route path={`${process.env.PUBLIC_URL}/welcome`} component={Welcome} />{" "}
+            <Route path={`${process.env.PUBLIC_URL}/premium`} component={(premium && Premium) || (!premium && Home)} />{" "}
+            <Route path={`${process.env.PUBLIC_URL}/profile`} component={Profile} />{" "}
             <Route path="*" component={NotFound} />{" "}
           </Switch>{" "}
         </Container>{" "}
